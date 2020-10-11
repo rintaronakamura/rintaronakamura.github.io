@@ -9,6 +9,7 @@ I am Freelance web developer from Japan 🇯🇵.
 
 ## 📬 Get in touch
 
+- [github](https://github.com/residenti)
 - [linkedIn](https://www.linkedin.com/in/rintaro-nakamura/)
 - [wantedly](https://www.wantedly.com/users/14837256)
 - [qiita](https://qiita.com/residenti)
