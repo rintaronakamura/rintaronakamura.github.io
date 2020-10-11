@@ -9,12 +9,11 @@ I am Freelance web developer from Japan 🇯🇵.
 
 ## 📬 Get in touch
 
-- [LinkedIn](https://www.linkedin.com/in/rintaro-nakamura/)
-- [Wantedly](https://www.wantedly.com/users/14837256)
-- [residenti blog](https://residenti-blog.herokuapp.com/)
-- [Qiita](https://qiita.com/residenti)
-- [Twitter](https://twitter.com/v_residenti)
-- [Facebook](https://www.facebook.com/profile.php?id=100008694337379)
+- [linkedIn](https://www.linkedin.com/in/rintaro-nakamura/)
+- [wantedly](https://www.wantedly.com/users/14837256)
+- [qiita](https://qiita.com/residenti)
+- [twitter](https://twitter.com/v_residenti)
+- [facebook](https://www.facebook.com/profile.php?id=100008694337379)
 
 ## ✨ Skill
 
