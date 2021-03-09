@@ -105,3 +105,75 @@ end
 `BasicObject` を継承しているのは、`Object`のインスタンスメソッドに`display`という名前のものが存在していて、`Object`を継承すると、その`display`メソッドが呼び出されてしまうから。
 このように、ゴーストメソッドの名前と、継承した本物の名前が衝突する問題を避けるために、不要なメソッドはあらかじめ削除しておく。
 こうした最小限のメソッドしかない状態のクラスを**ブランクスレート**と呼ぶ。
+
+# 第4章 水曜日：ブロック
+
+## クロージャまとめ
+
+- ブロックとはクロージャである。
+  - ブロックを使うことで、ローカル束縛を包んで、持ち運ぶことができる。
+- Rubyのスコープは`class`、`module`、`def`といったスコープゲートで仕切られる。
+- クロージャに関する基本的な魔術として、**フラットスコープ**というものがある。
+  - フラットスコープとは、スコープゲートをメソッド呼び出しで置き換え、現在の束縛をクロージャで包み、そのクロージャをメソッドに渡すことで、スコープゲートを飛び越えることができる。
+  - `class`は`Class.new`と、`module`は`Module.new`と`def`は`Module.define_method`と置き換えることができる。
+- **共有スコープ**とは、同じフラットスコープに複数のメソッドを定義して、スコープゲートで守ることで、束縛を共有する方法である。
+
+フラットスコープ1
+```ruby
+my_var = '成功'
+
+class MyClass
+  # my_varをここに表示したい
+
+  def my_method
+    # my_varをここに表示したい
+  end
+end
+
+# スコープゲート(`class`)をメソッド(`Class.new`)に置き換える。
+my_var = '成功'
+
+MyClass = Class.new do
+  puts "クラス定義の中は#{my_var}！"
+
+  def my_method
+    # my_varをここに表示したい
+  end
+end
+
+# スコープゲート(`method`)をメソッド(`define_method`)に置き換える。
+my_var = '成功'
+
+MyClass = Class.new do
+  puts "クラス定義の中は#{my_var}！"
+
+  define_method :my_method do
+    "メソッド定義の中も#{my_var}！"
+  end
+end
+
+puts Myclass.new.my_method
+# => クラス定義の中は成功！
+#    メソッド定義の中も成功！
+```
+
+共有スコープ
+```ruby
+def define_methods
+  shared = 0
+
+  Kernel.send :define_method, :counter do
+    shared
+  end
+
+  Kernel.send :define_method, :inc do |x|
+    shared += x
+  end
+end
+
+define_methods
+
+counter # => 0
+inc(4)
+counter # => 4
+```
