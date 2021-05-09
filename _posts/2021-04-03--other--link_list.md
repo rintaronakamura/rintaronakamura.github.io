@@ -46,10 +46,18 @@ categories: other
 
 - [Rubyのインスタンス変数の直接参照について - 雑草SEの備忘録](https://normalse.hatenablog.jp/entry/2016/08/21/013100)
   - インスタンス変数を直接参照するか、`attr_reader` を定義するのか
+- [Don't Use the Mac System Ruby – Use This Instead](https://www.freecodecamp.org/news/do-not-use-mac-system-ruby-do-this-instead/)
 
 ### JavaScript
 
 - [JavaScriptが辿った変遷](https://zenn.dev/naoki_mochizuki/articles/46928ccb420ee733f78f)
+
+## フレームワーク
+
+### Rails
+
+- [「コミッターと読み進めるRailsリーディング会 #1」を開催しました！~ Rails v1.0.0を読み進める！ ~](https://tech.andpad.co.jp/entry/2020/02/18/092938)
+  - v1.0.0を軸にRailsの構成を読み解いていく
 
 ## その他
 
