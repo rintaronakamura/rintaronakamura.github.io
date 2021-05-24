@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "参考リンク集"
+title:  "ブックマーク"
 date:   2021-04-03 16:00:00 +0900
 categories: other
 ---
 
-# 参考リンク集
+# ブックマーク
 
 ## CS
 
@@ -44,6 +44,7 @@ categories: other
 
 ### Ruby
 
+- [ruby trunk changes](https://ruby-trunk-changes.hatenablog.com/)
 - [Rubyのインスタンス変数の直接参照について - 雑草SEの備忘録](https://normalse.hatenablog.jp/entry/2016/08/21/013100)
   - インスタンス変数を直接参照するか、`attr_reader` を定義するのか
 - [Don't Use the Mac System Ruby – Use This Instead](https://www.freecodecamp.org/news/do-not-use-mac-system-ruby-do-this-instead/)
@@ -56,8 +57,31 @@ categories: other
 
 ### Rails
 
+- [Rails Api Document](https://api.rubyonrails.org/)
+- [awesome ruby](https://awesome-ruby.com/)
+  - Gem を検索できるやつ
+- [rails commit log流し読み](https://y-yagi.hatenablog.com/)
 - [「コミッターと読み進めるRailsリーディング会 #1」を開催しました！~ Rails v1.0.0を読み進める！ ~](https://tech.andpad.co.jp/entry/2020/02/18/092938)
   - v1.0.0を軸にRailsの構成を読み解いていく
+
+### Rspec
+
+- [RSpec スタイルガイド](https://willnet.gitbooks.io/rspec-style-guide/content/)
+- [](https://willnet.gitbooks.io/rspec-style-guide/content/)
+- [](https://willnet.gitbooks.io/rspec-style-guide/content/)
+
+## エディタ
+
+### vim
+
+- [Vim8の導入 - Goodbye, World](http://coffeegkgk.hatenablog.com/entry/2018/08/14/181542)
+- [既存のvimをluaオプション付きのvim8.0に入れ替える。](https://qiita.com/Fendo181/items/8a5545cd7550bd9a3c91)
+- [Vimの設定をシェイプアップした話 - MyEnigma](https://myenigma.hatenablog.com/entry/2018/08/13/205942)
+- [Vim 8.0 Advent Calendar 8 日目 defaults.vim - Qiita](https://qiita.com/thinca/items/9a42ef9047d44a765bdd)
+- [welcome home : vim online](https://www.vim.org/)
+- [Vim - the text editor](https://github.com/vim)
+- [Vimのすゝめ改 | 株式会社創夢 — SOUM/misc](https://www.soum.co.jp/misc/vim-advanced/)
+- [20 Best VIM color-schemes as of 2019 - Slant](https://www.slant.co/topics/480/~best-vim-color-schemes)
 
 ## その他
 
