@@ -5,8 +5,6 @@ date:   2021-06-09 22:00:00 +0900
 categories: book
 ---
 
-# Crafting Rails4 Applications 覚え書き
-
 ## この記事に書いてあること
 
 [Crafting Rails 4 Applications Expert Practices for Everyday Rails Development](https://pragprog.com/titles/jvrails2/crafting-rails-4-applications/)を読み次のことを記載している。
@@ -17,16 +15,17 @@ categories: book
 
 ## 1. Creating Our Owner Render
 
-### ざっくりまとめ
-
 Rails のレンダリング処理を読み解いていく章。
 
-#### 1.1 ~ 1.2
+### 1.1 ~ 1.2
+
+#### ざっくりまとめ
+
 
 [`pdf_renderer`](https://github.com/residenti/pdf_renderer) という Gemを実装することで、`render` メソッドが `:pdf` のようなオプションを渡された時に、どのような処理が行われているのかをRailsのソースコード(正確には、`actionpack`)を見ながら理解した。
 具体的には、`rails/actionpack/lib/action_dispatch/http/mine_type.rb` にContentTypeに対応するMINETypeをセットにしたコードがあり、それを元に `:pdf` の対になるMINEType(application/pdf)を決めていた。
 
-### Tips
+#### Tips
 
 1. [未解決] ダミーアプリを起動する
 
@@ -44,21 +43,23 @@ Could not load server "puma". Maybe you need to the add it to the Gemfile?
 Run `bin/rails server --help` for more options.
 ```
 
-### Question
+#### Question
 
 なし。
 
-#### 1.3 ~
+### 1.3 ~
+
+#### ざっくりまとめ
 
 `AbstractController::Rendering#render` を呼び出した時のレンダリング処理がどのように走っていくのかを読み解いていく。
 
-### Tips
+#### Tips
 
 1. Gemのソースコードにデバッガーを仕込んでデバッグする
 
 本書の内容ではないが、デバッグしならがらの方が理解度上がると思ったので、[pry-byebugをインストールした](https://github.com/residenti/pdf_renderer/commit/bd684f3f5e6fabcaba2781a6d270dd4799e11d98)。
 その他、デバッグしたいGemのソースコードは `bundle open` コマンドで開いて、`bundle pristine` で変更を戻していた。
 
-### Question
+#### Question
 
 1. `AbstractController::Rendering#_process_options` は空実装で、`ActionController::Rendering#_process_options` をどのようにして呼び出しているのか。
