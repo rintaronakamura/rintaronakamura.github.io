@@ -13,7 +13,7 @@ categories:  book
 [Crafting Rails 4 Applications Expert Practices for Everyday Rails Development](https://pragprog.com/titles/jvrails2/crafting-rails-4-applications/)を読み次のことを記載している。
 
 1. Outline・・・各章で学んだことをざっくりとまとめている。
-2. Diff・・・Rails6を使って開発を行うことにしたため、本書の記載内容と参照先のソースコードが異なる時があるため、そのことについてを記載している。
+2. Diff・・・本書で扱われているバージョンと異なるもの(Rails6)で進めているため、参照先のソースコードが本に記載されている内容と異なることがある。そこについて記載している。
 3. DevTips・・・実際に手を動かしている中で気になったことを記載している。
 4. Question・・・本書を読んでいて心配なことや気になったことを記載している。
 
