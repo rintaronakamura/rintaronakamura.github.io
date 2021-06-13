@@ -6,7 +6,7 @@ update_date: 2021-06-13
 categories:  book
 ---
 
-![メイン画像]({{site.baseurl}}/assets/images/crafting_rails4_applications.png)
+![書籍カバー]({{site.baseurl}}/assets/images/crafting_rails4_applications.png)
 
 ## この記事に書いてあること
 
@@ -139,3 +139,7 @@ Rails6では、`AbstractController::Layouts#_normalize_options` は  [`ActionCon
 #### Question
 
 なし。
+
+## 参考記事
+
+- [【勉強会報告】Crafting Rails 4 Applications読み会をはじめました＋第一回資料｜TechRacho（テックラッチョ）〜エンジニアの「？」を「！」に〜｜BPS株式会社](https://techracho.bpsinc.jp/morimorihoge/2014_03_29/16247)
