@@ -20,15 +20,16 @@ categories: book
 
 Rails のレンダリング処理を読み解いていく章。
 
-### 1.1 ~ 1.2
+### 1.1 Creating Your First Rails Plug-in ~ 1.2 Writing the Renderer
 
 #### Outline
-
 
 [`pdf_renderer`](https://github.com/residenti/pdf_renderer) という Gemを実装することで、`render` メソッドが `:pdf` のようなオプションを渡された時に、どのような処理が行われているのかをRailsのソースコード(正確には、`actionpack`)を見ながら理解した。
 具体的には、`rails/actionpack/lib/action_dispatch/http/mine_type.rb` にContentTypeに対応するMINETypeをセットにしたコードがあり、それを元に `:pdf` の対になるMINEType(application/pdf)を決めていた。
 
 ####  Diff
+
+TODO
 
 #### DevTips
 
