@@ -74,7 +74,10 @@ end
 
 レンダリング処理にフックし機能を拡張してくれるモジュールたち。
 - `AbstractController::Layouts` ・・・[`ActionController::Rendering#_normalize_options`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb#L93-L106)をオーバーライドすることで、`:layout` オプションをサポートする(＊Diffの1を参照)
-- [`ActionController::Rendering`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb)・・・[`AbstractController::Rendering#render`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L21-L33)を[オーバーライドする](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb#L27-L31)ことで、[`DoubleRenderError`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L9-L15) が発生するようにしている。また、[`AbstractController::Rendering#_process_options`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L94-L97) を[オーバーライドする](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb#L116-L125)ことで `:location`,`:status`,`content_type` オプションをハンドリングできるようになる。
+- [`ActionController::Rendering`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb)・・・[`AbstractController::Rendering#render`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L21-L33)を[オーバーライドする](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb#L27-L31)ことで、[`DoubleRenderError`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L9-L15) が発生するようにしている。また、[`AbstractController::Rendering#_process_options`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L94-L97) を[オーバーライドする](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/rendering.rb#L116-L125)ことで `:location`,`:status`,`content_type` オプションをハンドリングできるようになる
+- [`ActionController::Renderers`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/renderers.rb)・・・`:pdf` のようなキーに対応できるようにする
+- [`ActionController::Instrumentation`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/instrumentation.rb)・・・[`AbstractController::Rendering#render`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L21-L33)を[オーバーライドする]()ことで、レンダリング処理にかかった時間を計測できるようになる
+- [`ActionController::Streaming`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/streaming.rb)・・・[`AbstractController::Rendering#_process_options`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/abstract_controller/rendering.rb#L94-L97)を[オーバーライドする](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/streaming.rb#L197-L209)ことで、適切なHTTPヘッダを設定して `:stream` オプションを処理できるようになり、また、[`ActionController::Streaming#_render_template`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/streaming.rb#L211-L218) によってテンプレートがストリームを処理できるようになる。
 
 #### Diff
 
@@ -96,3 +99,43 @@ Rails6では、`AbstractController::Layouts#_normalize_options` は  [`ActionCon
 #### Question
 
 1. `AbstractController::Rendering#_process_options` は空実装で、`ActionController::Rendering#_process_options` をどのようにして呼び出しているのか。
+2. [`ActionController::Streaming#_render_template`](https://github.com/rails/rails/blob/3b1f87aded6d42124e4272428447a642564c6677/actionpack/lib/action_controller/metal/streaming.rb#L211-L218) はどこから呼ばれているか。
+
+### 1.4 Taking It to the Next Level
+
+#### Outline
+
+この章で実装したGem(`pdf_renderer`)は、`render_to_string()` を呼び出しいるので、`template:` を渡すことで明示的にテンプレートを指定することができることがわかった。
+そこで、[実際にテスト用アプリケーションのコントローラーにテンプレートを指定したアクション(`another`)と、それ用のテストケースを追加して](https://github.com/residenti/pdf_renderer/commit/cfb3e9e8e4c683695e915f1cf9b0e8d4b8db93d8)、`:pdf` が `template:` を引数に取れることを証明した。
+
+#### Diff
+
+なし。
+
+#### DevTips
+
+なし。
+
+#### Question
+
+なし。
+
+### 1.5 Wrapping Up
+
+#### Outline
+
+- この章でPDF用のレンダラーGemを実装した
+  - この実装方法に沿えば、CSVやATOMなどもレンダリングできるようになるし、HTMLをPDFに変換するようなライブラリをラッパーしたものも実装できる。
+- Railsのレンダリング処理とモジュール性の説明
+
+#### Diff
+
+なし。
+
+#### DevTips
+
+なし。
+
+#### Question
+
+なし。
