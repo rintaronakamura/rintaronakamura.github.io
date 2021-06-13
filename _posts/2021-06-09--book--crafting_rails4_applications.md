@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "Crafting Rails4 Applications 覚え書き"
-date:   2021-06-09 22:00:00 +0900
-categories: book
+layout:      post
+title:       Crafting Rails4 Applications 覚え書き
+date:        2021-06-09
+update_date: 2021-06-13
+categories:  book
 ---
 
 ![メイン画像]({{site.baseurl}}/assets/images/crafting_rails4_applications.png)
