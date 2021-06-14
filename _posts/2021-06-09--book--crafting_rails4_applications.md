@@ -143,3 +143,21 @@ Rails6では、`AbstractController::Layouts#_normalize_options` は  [`ActionCon
 ## 参考記事
 
 - [【勉強会報告】Crafting Rails 4 Applications読み会をはじめました＋第一回資料｜TechRacho（テックラッチョ）〜エンジニアの「？」を「！」に〜｜BPS株式会社](https://techracho.bpsinc.jp/morimorihoge/2014_03_29/16247)
+
+## 2. Building Models with Active Model
+
+この章では、次のことを見ていく。
+- ActiveModelとそのモジュール
+- オブジェクトをRailsが要求するActive Model APIに適合させる方法
+- バリデータとRuby定数
+
+### 1.1
+
+#### Outline
+
+####  Diff
+
+#### DevTips
+
+#### Question
+
