@@ -65,6 +65,7 @@ categories: other
 - [「コミッターと読み進めるRailsリーディング会 #1」を開催しました！~ Rails v1.0.0を読み進める！ ~](https://tech.andpad.co.jp/entry/2020/02/18/092938)
   - v1.0.0を軸にRailsの構成を読み解いていく
 - [【勉強会報告】Crafting Rails 4 Applications読み会をはじめました＋第一回資料｜TechRacho（テックラッチョ）〜エンジニアの「？」を「！」に〜｜BPS株式会社](https://techracho.bpsinc.jp/morimorihoge/2014_03_29/16247)
+- [Rails Developers Meetup | [Day 2: C-17] Ruby on Railsの正体と向き合い方](https://youtu.be/ecpq0U4zkWE)
 
 ### Rspec
 
