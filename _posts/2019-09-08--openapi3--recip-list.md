@@ -91,7 +91,7 @@ components:
           example: 1
         name:
           type: string
-          example: residenti
+          example: rintaronakamura
   securitySchemes:
     Bearer:
       type: http

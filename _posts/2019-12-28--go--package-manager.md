@@ -69,7 +69,7 @@ RailsだとGemfileに記載されたGemをプロジェクトごとに管理し�
 
 [go.mod]
 ```go
-module github.com/residenti/go_module_sample
+module github.com/rintaronakamura/go_module_sample
 
 go 1.13
 
@@ -102,6 +102,6 @@ GOPATH mode で go get すると $GOPATH/src 以下に配置されるが、modul
 ・tools.goというファイルにblank importでツールとして利用するパッケージを記載しといてあげることで、go mod tidy したときに消されなくなる  
 ・go install を行うとGOBINという環境変数に指定されたパス配下に実行ファイルを吐き出しくれるので、この値を GOBIN=プロジェクト/bin にしておくとプロジェクト配下に配置することができる
 
-以上のことを踏まえて、作成したプロジェクトが[trading_bitcoin_api](https://github.com/residenti/trading_bitcoin_api)になる。
+以上のことを踏まえて、作成したプロジェクトが[trading_bitcoin_api](https://github.com/rintaronakamura/trading_bitcoin_api)になる。
 
-最後に作業中の状況を思い出すために、その時の[ツイート](https://twitter.com/v_residenti/status/1210214637980934144?s=20)を載せとく。
+最後に作業中の状況を思い出すために、その時の[ツイート](https://twitter.com/v_rintaronakamura/status/1210214637980934144?s=20)を載せとく。

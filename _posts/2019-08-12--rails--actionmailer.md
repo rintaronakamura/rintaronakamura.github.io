@@ -6,7 +6,7 @@ categories: rails
 ---
 
 気付けば久方ぶりのブログ更新です。
-今回は最近開発している[APIサービス](https://github.com/residenti/lalalalunch-api)で、アカウント登録完了時にアクセストークンをメールで送信する機能を実装したので、そのメモです。
+今回は最近開発している[APIサービス](https://github.com/rintaronakamura/lalalalunch-api)で、アカウント登録完了時にアクセストークンをメールで送信する機能を実装したので、そのメモです。
 
 ## Action Mailer
 

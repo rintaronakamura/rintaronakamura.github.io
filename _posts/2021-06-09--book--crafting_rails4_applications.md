@@ -25,7 +25,7 @@ Rails のレンダリング処理を読み解いていく章。
 
 #### Outline
 
-[`pdf_renderer`](https://github.com/residenti/pdf_renderer) という Gemを実装することで、`render` メソッドが `:pdf` のようなオプションを渡された時に、どのような処理が行われているのかをRailsのソースコード(正確には、`actionpack`)を見ながら理解した。
+[`pdf_renderer`](https://github.com/rintaronakamura/pdf_renderer) という Gemを実装することで、`render` メソッドが `:pdf` のようなオプションを渡された時に、どのような処理が行われているのかをRailsのソースコード(正確には、`actionpack`)を見ながら理解した。
 具体的には、`rails/actionpack/lib/action_dispatch/http/mine_type.rb` にContentTypeに対応するMINETypeをセットにしたコードがあり、それを元に `:pdf` の対になるMINEType(application/pdf)を決めていた。
 
 ####  Diff
@@ -93,7 +93,7 @@ Rails6では、`AbstractController::Layouts#_normalize_options` は  [`ActionCon
 
 1. Gemのソースコードにデバッガーを仕込んでデバッグする
 
-本書の内容ではないが、デバッグしならがらの方が理解度上がると思ったので、[pry-byebugをインストールした](https://github.com/residenti/pdf_renderer/commit/bd684f3f5e6fabcaba2781a6d270dd4799e11d98)。
+本書の内容ではないが、デバッグしならがらの方が理解度上がると思ったので、[pry-byebugをインストールした](https://github.com/rintaronakamura/pdf_renderer/commit/bd684f3f5e6fabcaba2781a6d270dd4799e11d98)。
 その他、デバッグしたいGemのソースコードは `bundle open` コマンドで開いて、`bundle pristine` で変更を戻していた。
 
 #### Question
@@ -106,7 +106,7 @@ Rails6では、`AbstractController::Layouts#_normalize_options` は  [`ActionCon
 #### Outline
 
 この章で実装したGem(`pdf_renderer`)は、`render_to_string()` を呼び出しいるので、`template:` を渡すことで明示的にテンプレートを指定することができることがわかった。
-そこで、[実際にテスト用アプリケーションのコントローラーにテンプレートを指定したアクション(`another`)と、それ用のテストケースを追加して](https://github.com/residenti/pdf_renderer/commit/cfb3e9e8e4c683695e915f1cf9b0e8d4b8db93d8)、`:pdf` が `template:` を引数に取れることを証明した。
+そこで、[実際にテスト用アプリケーションのコントローラーにテンプレートを指定したアクション(`another`)と、それ用のテストケースを追加して](https://github.com/rintaronakamura/pdf_renderer/commit/cfb3e9e8e4c683695e915f1cf9b0e8d4b8db93d8)、`:pdf` が `template:` を引数に取れることを証明した。
 
 #### Diff
 

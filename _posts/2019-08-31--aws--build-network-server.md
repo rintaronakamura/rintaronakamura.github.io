@@ -133,13 +133,13 @@ Load key "my-key.pem": bad permissions
 ec2-user@x.xxx.xxx.xxx: Permission denied (publickey).
 
 $ ls -la my-key.pem
--rw-r--r--@ 1 residenti  staff  1692  6  9 19:38 my-key.pem
+-rw-r--r--@ 1 rintaronakamura  staff  1692  6  9 19:38 my-key.pem
 
 # 400の「4」は、読み込み属性しか付いていないことを示す
 $ chmod 400 my-key.pem
 
 $ ls -la my-key.pem
--r--------@ 1 residenti  staff  1692  6  9 19:38 my-key.pem
+-r--------@ 1 rintaronakamura  staff  1692  6  9 19:38 my-key.pem
 ```
 
 ### 2. Your server is running PHP version 5.4.45 but WordPress 5.2.2 requires at least 5.6.20.

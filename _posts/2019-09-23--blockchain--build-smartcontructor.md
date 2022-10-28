@@ -44,17 +44,17 @@ $ brew install ethereum
 ==> Pouring ethereum-1.9.3.mojave.bottle.tar.gz
   /usr/local/Cellar/ethereum/1.9.3: 19 files, 327.2MB
 ==> `brew cleanup` has not been run in 30 days, running now...
-Removing: /Users/residenti/Library/Caches/Homebrew/libevent--2.1.10.mojave.bottle.tar.gz... (782.3KB)
-Removing: /Users/residenti/Library/Caches/Homebrew/oniguruma--6.9.2.mojave.bottle.tar.gz... (422.2KB)
+Removing: /Users/rintaronakamura/Library/Caches/Homebrew/libevent--2.1.10.mojave.bottle.tar.gz... (782.3KB)
+Removing: /Users/rintaronakamura/Library/Caches/Homebrew/oniguruma--6.9.2.mojave.bottle.tar.gz... (422.2KB)
 Removing: /usr/local/Cellar/openssl/1.0.2r... (1,795 files, 12.1MB)
-Removing: /Users/residenti/Library/Caches/Homebrew/wget--1.20.3_1.mojave.bottle.tar.gz... (1.4MB)
-Removing: /Users/residenti/Library/Logs/Homebrew/ncurses... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/tmux... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/oniguruma... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/libevent... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/jq... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/openssl... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/telnet... (64B)
+Removing: /Users/rintaronakamura/Library/Caches/Homebrew/wget--1.20.3_1.mojave.bottle.tar.gz... (1.4MB)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/ncurses... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/tmux... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/oniguruma... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/libevent... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/jq... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/openssl... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/telnet... (64B)
 Pruned 0 symbolic links and 2 directories from /usr/local
 ```
 
@@ -99,11 +99,11 @@ GOROOT=/usr/local/Cellar/go/1.12.9/libexec[]
 ```
 eth_private_net$ geth --datadir ~/eth_private_net init genesis.json
 INFO [09-22|18:47:33.874] Maximum peer count                       ETH=50 LES=0 total=50
-INFO [09-22|18:47:33.914] Allocated cache and file handles         database=/Users/residenti/eth_private_net/geth/chaindata cache=16.00MiB handles=16
+INFO [09-22|18:47:33.914] Allocated cache and file handles         database=/Users/rintaronakamura/eth_private_net/geth/chaindata cache=16.00MiB handles=16
 INFO [09-22|18:47:33.930] Writing custom genesis block
 INFO [09-22|18:47:33.931] Persisted trie from memory database      nodes=0 size=0.00B time=10.053µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
 INFO [09-22|18:47:33.932] Successfully wrote genesis state         database=chaindata hash=76d747…1a5e65
-INFO [09-22|18:47:33.932] Allocated cache and file handles         database=/Users/residenti/eth_private_net/geth/lightchaindata cache=16.00MiB handles=16
+INFO [09-22|18:47:33.932] Allocated cache and file handles         database=/Users/rintaronakamura/eth_private_net/geth/lightchaindata cache=16.00MiB handles=16
 INFO [09-22|18:47:33.945] Writing custom genesis block
 INFO [09-22|18:47:33.945] Persisted trie from memory database      nodes=0 size=0.00B time=4.841µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
 INFO [09-22|18:47:33.946] Successfully wrote genesis state         database=lightchaindata hash=76d747…1a5e65
@@ -124,11 +124,11 @@ eth_private_net$ geth --networkid "10" \
 INFO [09-22|19:08:02.762] Maximum peer count                       ETH=50 LES=0 total=50
 INFO [09-22|19:08:02.787] Starting peer-to-peer node               instance=Geth/v1.9.3-stable/darwin-amd64/go1.12.9
 INFO [09-22|19:08:02.788] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
-INFO [09-22|19:08:02.788] Allocated cache and file handles         database=/Users/residenti/eth_private_net/geth/chaindata cache=512.00MiB handles=5120
-INFO [09-22|19:08:02.822] Opened ancient database                  database=/Users/residenti/eth_private_net/geth/chaindata/ancient
+INFO [09-22|19:08:02.788] Allocated cache and file handles         database=/Users/rintaronakamura/eth_private_net/geth/chaindata cache=512.00MiB handles=5120
+INFO [09-22|19:08:02.822] Opened ancient database                  database=/Users/rintaronakamura/eth_private_net/geth/chaindata/ancient
 INFO [09-22|19:08:02.823] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Constantinople: <nil> Petersburg: <nil> Istanbul: <nil> Engine: unknown}"
-INFO [09-22|19:08:02.823] Disk storage enabled for ethash caches   dir=/Users/residenti/eth_private_net/geth/ethash count=3
-INFO [09-22|19:08:02.823] Disk storage enabled for ethash DAGs     dir=/Users/residenti/Library/Ethash count=2
+INFO [09-22|19:08:02.823] Disk storage enabled for ethash caches   dir=/Users/rintaronakamura/eth_private_net/geth/ethash count=3
+INFO [09-22|19:08:02.823] Disk storage enabled for ethash DAGs     dir=/Users/rintaronakamura/Library/Ethash count=2
 INFO [09-22|19:08:02.823] Initialising Ethereum protocol           versions=[63] network=10 dbversion=7
 INFO [09-22|19:08:02.877] Loaded most recent local header          number=0 hash=76d747…1a5e65 td=0 age=50y5mo1w
 INFO [09-22|19:08:02.877] Loaded most recent local full block      number=0 hash=76d747…1a5e65 td=0 age=50y5mo1w
@@ -137,7 +137,7 @@ INFO [09-22|19:08:02.878] Loaded local transaction journal         transactions=
 INFO [09-22|19:08:02.878] Regenerated local transaction journal    transactions=0 accounts=0
 INFO [09-22|19:08:02.893] Allocated fast sync bloom                size=512.00MiB
 INFO [09-22|19:08:02.894] Initialized fast sync bloom              items=0 errorrate=0.000 elapsed=89.152µs
-INFO [09-22|19:08:02.926] IPC endpoint opened                      url=/Users/residenti/eth_private_net/geth.ipc
+INFO [09-22|19:08:02.926] IPC endpoint opened                      url=/Users/rintaronakamura/eth_private_net/geth.ipc
 INFO [09-22|19:08:02.928] New local node record                    seq=5 id=f96ef41c9ab3040e ip=127.0.0.1 udp=0 tcp=30303
 INFO [09-22|19:08:02.928] Started P2P networking                   self="enode://32c08a3794125cf63b9c6355dde6dae5ec7fb51d09836f7a6e4b0c4c9b99897c7c33e802aed9723b0c61fe45e6d9d436d48b334e3e803191a824165fd5b20760@127.0.0.1:30303?discport=0"
 INFO [09-22|19:08:02.929] HTTP endpoint opened                     url=http://localhost:8545                    cors= vhosts=localhost
@@ -438,7 +438,7 @@ eth_private_net$ /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wal
 [2019-09-23T15:38:47.382] [INFO] EthereumNode - undefined null 'light'
 [2019-09-23T15:38:47.384] [INFO] EthereumNode - Defaults loaded: geth main light
 [2019-09-23T15:38:47.454] [INFO] main - Starting in Wallet mode
-[2019-09-23T15:38:53.364] [INFO] Db - Loading db: /Users/residenti/Library/Application Support/Ethereum Wallet/mist.lokidb
+[2019-09-23T15:38:53.364] [INFO] Db - Loading db: /Users/rintaronakamura/Library/Application Support/Ethereum Wallet/mist.lokidb
 [2019-09-23T15:38:53.379] [INFO] Windows - Creating commonly-used windows
 [2019-09-23T15:38:53.380] [INFO] Windows - Create secondary window: loading, owner: notset
 2019-09-23 15:38:53.389 Ethereum Wallet[11036:1015903] *** WARNING: Textured window <AtomNSWindow: 0x7fca848db000> is getting an implicitly transparent titlebar. This will break when linking against newer SDKs. Use NSWindow's -titlebarAppearsTransparent=YES instead.

@@ -7,7 +7,7 @@ categories: rails
 
 ## はじめに
 
-最近[Rails5で作成したアプリ](https://github.com/residenti/Blog)をHerokuにデプロイした。
+最近[Rails5で作成したアプリ](https://github.com/rintaronakamura/Blog)をHerokuにデプロイした。
 本記事には、次回同じような作業をする際にまた調べるのが面倒なので、その際の手順を記載しておく。
 ちなみに表題の通りDBにはMySQLを使ってる。
 
@@ -19,7 +19,7 @@ Ruby: 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin18]
 Git: 2.20.1 (Apple Git-117)
 Heroku: 7.22.10 darwin-x64 node-v11.10.1
 
-その他GemのバージョンなどはGitHubに作成したアプリのソースを上げているので、それの[Gemfile.lock](https://github.com/residenti/Blog/blob/master/Gemfile.lock)などを参考
+その他GemのバージョンなどはGitHubに作成したアプリのソースを上げているので、それの[Gemfile.lock](https://github.com/rintaronakamura/Blog/blob/master/Gemfile.lock)などを参考
 
 ## Herokuへデプロイ手順
 
@@ -34,16 +34,16 @@ $ heroku login
 ### Heroku上にアプリを登録
 
 ```
-$ heroku create residenti-blog
+$ heroku create rintaronakamura-blog
 ```
 
 下記のコマンドを叩いて登録できたか確認
 ```
 $ git remote -v
-heroku	https://git.heroku.com/residenti-blog.git (fetch)
-heroku	https://git.heroku.com/residenti-blog.git (push)
-origin	git@github.com:residenti/Blog.git (fetch)
-origin	git@github.com:residenti/Blog.git (push)
+heroku	https://git.heroku.com/rintaronakamura-blog.git (fetch)
+heroku	https://git.heroku.com/rintaronakamura-blog.git (push)
+origin	git@github.com:rintaronakamura/Blog.git (fetch)
+origin	git@github.com:rintaronakamura/Blog.git (push)
 ```
 
 ### HerokuにDBを追加して設定
@@ -62,7 +62,7 @@ DBを追加後は、環境変数の設定をした。
 
 ```
 $ heroku config
-=== residenti-blog Config Vars
+=== rintaronakamura-blog Config Vars
 CLEARDB_DATABASE_URL: mysql://username:password@hostname/db_name?reconnect=true
 ```
 
@@ -87,7 +87,7 @@ $ heroku config:add LANG=ja_JP.UTF-8
 
 ```
 $ heroku config
-=== residenti-blog Config Vars
+=== rintaronakamura-blog Config Vars
 CLEARDB_DATABASE_URL:     mysql://username:password@hostname/db_name?reconnect=true
 DATABASE_USERNAME:        username
 DATABASE_PASSWORD:        password

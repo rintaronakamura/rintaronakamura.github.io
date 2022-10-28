@@ -53,17 +53,17 @@ $ brew install ethereum
 ==> Pouring ethereum-1.9.3.mojave.bottle.tar.gz
   /usr/local/Cellar/ethereum/1.9.3: 19 files, 327.2MB
 ==> `brew cleanup` has not been run in 30 days, running now...
-Removing: /Users/residenti/Library/Caches/Homebrew/libevent--2.1.10.mojave.bottle.tar.gz... (782.3KB)
-Removing: /Users/residenti/Library/Caches/Homebrew/oniguruma--6.9.2.mojave.bottle.tar.gz... (422.2KB)
+Removing: /Users/rintaronakamura/Library/Caches/Homebrew/libevent--2.1.10.mojave.bottle.tar.gz... (782.3KB)
+Removing: /Users/rintaronakamura/Library/Caches/Homebrew/oniguruma--6.9.2.mojave.bottle.tar.gz... (422.2KB)
 Removing: /usr/local/Cellar/openssl/1.0.2r... (1,795 files, 12.1MB)
-Removing: /Users/residenti/Library/Caches/Homebrew/wget--1.20.3_1.mojave.bottle.tar.gz... (1.4MB)
-Removing: /Users/residenti/Library/Logs/Homebrew/ncurses... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/tmux... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/oniguruma... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/libevent... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/jq... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/openssl... (64B)
-Removing: /Users/residenti/Library/Logs/Homebrew/telnet... (64B)
+Removing: /Users/rintaronakamura/Library/Caches/Homebrew/wget--1.20.3_1.mojave.bottle.tar.gz... (1.4MB)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/ncurses... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/tmux... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/oniguruma... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/libevent... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/jq... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/openssl... (64B)
+Removing: /Users/rintaronakamura/Library/Logs/Homebrew/telnet... (64B)
 Pruned 0 symbolic links and 2 directories from /usr/local
 ```
 
@@ -112,16 +112,16 @@ $ npm info truffle versions
 
 ```
 $ npm install -g truffle
-/Users/residenti/.nodebrew/node/v12.8.1/bin/truffle -> /Users/residenti/.nodebrew/node/v12.8.1/lib/node_modules/truffle/build/cli.bundled.js
+/Users/rintaronakamura/.nodebrew/node/v12.8.1/bin/truffle -> /Users/rintaronakamura/.nodebrew/node/v12.8.1/lib/node_modules/truffle/build/cli.bundled.js
 
-> truffle@5.0.36 postinstall /Users/residenti/.nodebrew/node/v12.8.1/lib/node_modules/truffle
+> truffle@5.0.36 postinstall /Users/rintaronakamura/.nodebrew/node/v12.8.1/lib/node_modules/truffle
 > node ./scripts/postinstall.js
 
 - Fetching solc version list from solc-bin. Attempt #1
 - Downloading compiler. Attempt #1
 + truffle@5.0.36
 added 27 packages from 439 contributors in 22.828s
-residenti@lime:Desktop  $ truffle version
+rintaronakamura@lime:Desktop  $ truffle version
 Truffle v5.0.36 (core: 5.0.36)
 Solidity v0.5.8 (solc-js)
 Node v12.8.1

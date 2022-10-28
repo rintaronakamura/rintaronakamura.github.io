@@ -13,12 +13,12 @@ categories: git
 
 < 変更前 >
 ```
-residenti@lime:Blog $
+rintaronakamura@lime:Blog $
 ```
 
 < 変更後 >
 ```
-residenti@lime:Blog (master) $
+rintaronakamura@lime:Blog (master) $
 ```
 
 ## 参考サイト

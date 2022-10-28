@@ -1,4 +1,4 @@
-# residenti.github.io
+# rintaronakamura.github.io
 
 ## Setup
 

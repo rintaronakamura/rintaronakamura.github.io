@@ -24,9 +24,9 @@ dein.vimへと移行した時は、前職の先輩から貰ったneobundle.vim�
 
 自身のdein.vimを使ったプラグイン管理構成をすごくざっくり書くとこんな感じでした。
 
-- [`dein.toml`](https://github.com/residenti/dotfiles/commit/822aee9283d13b7bd46f7b31df3c6777a5745e7a#diff-edc7c12c9ac528a03ebe0fb206adc425)
+- [`dein.toml`](https://github.com/rintaronakamura/dotfiles/commit/822aee9283d13b7bd46f7b31df3c6777a5745e7a#diff-edc7c12c9ac528a03ebe0fb206adc425)
   - インストールしたいプラグインと、そのプラグインの設定を記載
-- [`.vimrc`](https://github.com/residenti/dotfiles/commit/822aee9283d13b7bd46f7b31df3c6777a5745e7a#diff-4e3abbeec5214ad1cc706a4616e2a28f)
+- [`.vimrc`](https://github.com/rintaronakamura/dotfiles/commit/822aee9283d13b7bd46f7b31df3c6777a5745e7a#diff-4e3abbeec5214ad1cc706a4616e2a28f)
   - dein.vimのインストール
   - dein.tomlに記載されているプラグインを読み込みまたは、インストールするための設定を追記
 
@@ -61,11 +61,11 @@ dein.vimへと移行した時は、前職の先輩から貰ったneobundle.vim�
 
 簡単な使い方としては、指定のディレクトリ(~/.vim/pack/mypackage/start/)を作成し、そこに`git clone`でプラグインを配置しておくことで、Vim起動時にプラグインが読み込まれます。
 
-例えば、[amatatsu](https://github.com/residenti/amatatsu)というプラグインをVim起動時に読み込みたいなら次のようになります。
+例えば、[amatatsu](https://github.com/rintaronakamura/amatatsu)というプラグインをVim起動時に読み込みたいなら次のようになります。
 ```console
-% mkdir -p ~/.vim/pack/residenti/start/
-% cd ~/.vim/pack/residenti/start/
-% git clone https://github.com/residenti/amatatsu.git
+% mkdir -p ~/.vim/pack/rintaronakamura/start/
+% cd ~/.vim/pack/rintaronakamura/start/
+% git clone https://github.com/rintaronakamura/amatatsu.git
 ```
 
 > そう、Vim 8 なら無理にプラグインマネージャーを使わずとも簡単にプラグインを読み込めるのです。 更新するのだって簡単で、プラグインのリポジトリで git pull すればいいだけです。
@@ -99,19 +99,19 @@ dein.vimへと移行した時は、前職の先輩から貰ったneobundle.vim�
 ```
 こちらに関しては既に[dotfilesで管理](https://qiita.com/okamos/items/7f5461814e8ed8916870)している方もいらっしゃるかと思います。
 
-自身も[`dotfiles`](https://github.com/residenti/dotfiles)で`.vimrc`や`.zshrc`などの設定ファイルを管理しているので、今回も`dotfiles`配下に[`_vim`](https://github.com/residenti/dotfiles/tree/master/_vim)ディレクトリを作成し、`~/.vim`にシンボリックリンクを貼って運用しています。
+自身も[`dotfiles`](https://github.com/rintaronakamura/dotfiles)で`.vimrc`や`.zshrc`などの設定ファイルを管理しているので、今回も`dotfiles`配下に[`_vim`](https://github.com/rintaronakamura/dotfiles/tree/master/_vim)ディレクトリを作成し、`~/.vim`にシンボリックリンクを貼って運用しています。
 
 ### 1-2. プラグインを git submodule で管理する
 「げ、出たsubmodule。。。よう分からん。」という感じだったので、[Git submodule の基礎](https://qiita.com/sotarok/items/0d525e568a6088f6f6bb)で勉強し直しました。
 
 submoduleが何となく分かったので、プラグインをsubmoduleとして管理します。
 
-例として、[amatatsu](https://github.com/residenti/amatatsu)というプラグインを管理してみます。**このプラグインはVim起動時に読み込みたいため、`start`ディレクトリ配下にインストールします。**
+例として、[amatatsu](https://github.com/rintaronakamura/amatatsu)というプラグインを管理してみます。**このプラグインはVim起動時に読み込みたいため、`start`ディレクトリ配下にインストールします。**
 
 ```console
 % cd ~/.vim
-% mkdir -p pack/residenti/start
-% git submodule add https://github.com/residenti/amatatsu.git pack/residenti/start/amatatsu
+% mkdir -p pack/rintaronakamura/start
+% git submodule add https://github.com/rintaronakamura/amatatsu.git pack/rintaronakamura/start/amatatsu
 % git commit -m 'add amatatsu plugin.'
 ```
 
@@ -120,7 +120,7 @@ submoduleが何となく分かったので、プラグインをsubmoduleとし�
 ```
 ~/.vim/
 |- pack/
-   |- residenti/
+   |- rintaronakamura/
       |- start/
         |- amatatsu/
 ```
